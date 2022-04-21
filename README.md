@@ -19,7 +19,7 @@ This repository is fully functional. It requires some refactoring to clean up th
 
 Things that need to be done:
 
-- [ ] Add `ros2_ws`
-- [ ] Add `leorover_realsense` package into this repository
-- [ ] Change shared volume from original `ros2_ws` to this internal `ros2_ws`
-- [ ] Change package name of `leorover_realsense` to a more genering name for easier re-use of the package
+- [x] Add `ros2_ws`
+- [x] Add `leorover_realsense` package into this repository
+- [x] Change shared volume from original `ros2_ws` to this internal `ros2_ws`
+- [x] Change package name of `leorover_realsense` to a more genering name for easier re-use of the package
