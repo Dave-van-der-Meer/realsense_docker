@@ -41,7 +41,7 @@ DOCKER_RUN_CMD=(
     --security-opt "seccomp=unconfined"
     --volume "/etc/localtime:/etc/localtime:ro"
     --volume "/dev:/dev"
-    --volume "/home/xavier/ros2_ws/src/src-ros2-leo/leorover_realsense:/home/leo/ros2_ws/src/leorover_realsense"
+    --volume "./ros2_ws/src/leorover_realsense:/home/leo/ros2_ws/src/leorover_realsense"
     "${VOLUMES}"
     "${ENVS}"
     "${IMG}"
