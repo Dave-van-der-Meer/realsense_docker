@@ -22,6 +22,7 @@ RUN apt-get update && \
 
 ### Copy over config files and launch scripts
 # COPY ./config ${WS_DIR}/config
+COPY ./config /home/leo/config
 # COPY ./launch ${WS_DIR}/launch
 COPY ./entrypoint.sh /
 RUN chmod +x /entrypoint.sh
