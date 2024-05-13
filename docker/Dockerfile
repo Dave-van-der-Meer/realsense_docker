@@ -1,8 +1,8 @@
 ARG PARENT_IMAGE=ros
-ARG PARENT_TAG=foxy
+ARG PARENT_TAG=humble
 FROM ${PARENT_IMAGE}:${PARENT_TAG}
 
-RUN useradd -ms /bin/bash leo
+# RUN useradd -ms /bin/bash leo
 
 ### Use bash by default
 SHELL ["/bin/bash", "-c"]
@@ -21,17 +21,17 @@ RUN apt-get update && \
 
 
 ### Copy over config files and launch scripts
-COPY ./config ${WS_DIR}/config
-COPY ./launch ${WS_DIR}/launch
+# COPY ./config ${WS_DIR}/config
+# COPY ./launch ${WS_DIR}/launch
 COPY ./entrypoint.sh /
 RUN chmod +x /entrypoint.sh
-RUN chmod +x /launch/lunalab_leo03.bash
+# RUN chmod +x /launch/lunalab_leo03.bash
 ENTRYPOINT ["/entrypoint.sh"]
 
-USER leo
+# USER leo
 WORKDIR /home/leo
 
-RUN mkdir -p /home/leo/ros2_ws/src
+# RUN mkdir -p /home/leo/ros2_ws/src
 ### Set default command
 
 CMD ["bash"]
