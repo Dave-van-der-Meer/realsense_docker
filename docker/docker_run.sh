@@ -22,13 +22,10 @@ DOCKER_RUN_CMD=(
     --volume "/etc/localtime:/etc/localtime:ro"
     --volume "/dev:/dev"
     --volume "${PWD}/../ros2_ws/src/leorover_realsense:/home/leo/ros2_ws/src/leorover_realsense"
-    -v /dev/shm:/dev/shm
-    # -v $HOME/.ros/log:/.ros/log
+    --volume "/dev/shm:/dev/shm"
     --env ROS_NAMESPACE=${ROS_NAMESPACE}
     --env ROS_DOMAIN_ID=${ROS_DOMAIN_ID}
     --env ROS_LOCALHOST_ONLY=${ROS_LOCALHOST_ONLY}
-    --env RMW_IMPLEMENTATION=rmw_fastrtps_cpp
-    --env FASTRTPS_DEFAULT_PROFILES_FILE=/home/leo/fast_dds.xml
     "${ENVS}"
     "${IMG}"
     "${CMD}"
