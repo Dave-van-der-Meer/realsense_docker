@@ -4,8 +4,8 @@ if [ ${#} -lt 1 ]; then
     #echo "Usage: ${0} <docker image> <cmd (optional)>"
     #exit 1
     IMG="local/realsense:humble"
-    # CMD="bash"
-    CMD="ros2 launch leorover_realsense ns_d455_launch.py"
+    CMD="bash"
+    # CMD="ros2 launch leorover_realsense ns_d455_launch.py"
 
 fi
 
